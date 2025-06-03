@@ -1,0 +1,196 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat+Brush&display=swap');
+@font-face {
+    font-family: 'Android';
+    src: url(/fontes/idroid.otf) format('opentype');   
+    font-weight: normal;  
+}
+
+/*
+#14F500
+#30CA22
+#3EA035
+#40753B
+#344B32
+#2B332B
+*/
+
+:root{
+    --cor0: #b9d8b6;
+    --cor1: #30CA22;
+    --cor2: #3EA035;
+    --cor3: #40753B;
+    --cor4: #344B32;
+    --cor5: #2B332B;
+
+    --fonte-padrao: Arial, Verdana, Helvetica, sans-serif;
+    --fonte-destaque: "Bebas Neue", sans-serif;
+    --fonte-android: "Android", cursive;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+      background-color: var(--cor0) ;
+      font-family: var(--fonte-padrao);
+}
+
+a.externo:after{
+    content: '\1F517';
+}
+
+header{
+    background-image: linear-gradient(to bottom, var(--cor2), var(--cor5));
+    min-height: 150px;
+    text-align: center;
+}
+
+
+header > h1{
+    color: white;
+    text-align: center;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    padding-top: 30px;
+    margin-bottom: 20px;
+    
+}
+
+header > p{
+    text-align: center;
+    color: white;
+    font-family: var(--fonte-padrao);
+    font-size: 1.2em;
+    max-width: 500px;
+    margin: auto;
+   
+}
+
+nav{
+    background-color: var(--cor5);
+    padding: 10px;
+
+}
+nav > a{
+    text-decoration: none;
+    padding: 10px;
+    color: white;
+    font-weight: bold;
+    transition-duration: .5s;
+    
+}
+
+nav > a:hover{
+    background-color:var(--cor0) ;
+}
+main{
+    background-color: white;
+    margin: auto;
+    margin-bottom: 10px;
+    min-width: 280px;
+    max-width: 800px;
+    padding: 20px;
+}
+
+main h1{
+    color:var(--cor5);
+    font-family: var(--fonte-android);
+}
+
+main h2{
+    font-family: var(--fonte-android);
+    background-image: linear-gradient(to right, var(--cor1), transparent);
+    color: #344B32;
+}
+
+main img.pequena{
+    max-width: 350px;
+    margin: auto;
+    display: block; /* em foto tem que colocar essa linha para centralizar com margin auto pq foto não é bloco*/
+
+}
+
+main p{
+    margin: 15px 0px;
+    text-align: justify;
+    text-indent: 30px;
+    font-size: 1.1em;
+    line-height: 2em;
+}
+
+main strong{
+    color: #344B32;
+    font-weight: bold;
+}
+
+main a{
+    background-color: #b5f1b090;
+    text-decoration: none;
+    color: #2B332B;
+}
+
+main a:hover{
+    text-decoration: underline;
+    color: #30CA22;
+    background-color: white;
+}
+
+div.video{
+    background-color: #2B332B;
+    padding: 20px;
+    margin: 0px -20px 30px -20px;
+    padding-bottom: 50%; /*CONFIGURAÇÕES ABAIXO para centralizar e fazer com que o video se adpate ao tamanho da tela*/
+    position: relative; 
+}
+
+div.video > iframe{
+    position: absolute; /*CONFIGURAÇÕES ABAIXO para centralizar e fazer com que o video se adpate ao tamanho da tela*/
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor0);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 3px 3px 10px #2B332B
+}
+
+aside > ul{
+    list-style-position: inside;
+    columns: 2;
+    list-style-type: '\2714\00A0'; /*PARA MUDAR O FORMATO DA BOLINHA DA LISTA. 2714 *É O CODIGO DO SIMBOLO, A \ É OBRIGATORIA AMTES DO CODIGO, AS ' ' SAO NECESSARIAS TAMBEM. o 00A0 apos a ultima \ é para dar espaço depois do checkmark, não sendo obrigatorio usar*/
+}
+
+aside > h1{
+    color: #a7eca1;
+    background-color: #344B32;
+    padding: 1px;
+    margin: -10px -10px 0px -10px;
+    border-radius: 10px 10px 0px 0px;
+    text-align: center;
+}
+
+footer{
+    background-color: #2B332B;
+    color: white;
+    text-align: center;
+    font-size: 0.8em;
+}
+
+footer a{
+    color: white;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+footer a:hover{
+    color: #30CA22;
+    text-decoration: underline;
+}
